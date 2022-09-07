@@ -18,7 +18,7 @@ namespace Assignment5
         /// <param name="name"></param>
         /// <param name="amount"></param>
         /// <param name="group"></param>
-        public Item(string name, int amount, ItemGroup group)
+        public Item(string name = "NA", int amount = 0, ItemGroup group = ItemGroup.Key)
         {
             Name = name;
             Amount = amount;
@@ -28,7 +28,7 @@ namespace Assignment5
         public override string ToString()
         {
             // TODO: display the output like this Axe
-            return base.ToString();
+            return $"{Name} [{Amount}] - {Enum.GetName(typeof(ItemGroup), Group)}";
         }
     }
 }
